@@ -16,4 +16,5 @@ LOD main_a
 ADD main_b
 SET main_c
 OUT 0
+#TOAQUI
 @fim JMP fim

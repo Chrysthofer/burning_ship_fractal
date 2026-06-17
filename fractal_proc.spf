@@ -2,11 +2,11 @@
   "metadata": {
     "projectName": "fractal_proc",
     "createdAt": "2026-05-19T22:38:24.445Z",
-    "lastModified": "2026-06-17T13:47:20.219Z",
+    "lastModified": "2026-06-17T19:51:58.726Z",
     "computerName": "KRISTOFFER",
     "appVersion": "6.3.0",
     "projectPath": "C:\\Users\\LCOM\\Desktop\\burning_ship_fractal\\fractal_proc",
-    "lastOpened": "2026-06-17T14:15:36.969Z"
+    "lastOpened": "2026-06-17T19:50:17.160Z"
   },
   "structure": {
     "basePath": "C:\\Users\\LCOM\\Desktop\\burning_ship_fractal\\fractal_proc",
@@ -41,7 +41,7 @@
       }
     ],
     "topLevelFile": "andExemplo\\Hardware\\andExemplo.v",
-    "testbenchFile": "andExemplo\\Simulation\\andExemplo_tb.v",
+    "testbenchFile": "",
     "synthesizableFiles": [
       {
         "name": "AndGate.v",
@@ -99,11 +99,6 @@
         "name": "AndGate_tb.v",
         "path": "C:\\Users\\LCOM\\Desktop\\proj_teste\\AndGate\\Simulation\\AndGate_tb.v",
         "isTopLevel": false
-      },
-      {
-        "name": "andExemplo_tb.v",
-        "path": "andExemplo\\Simulation\\andExemplo_tb.v",
-        "isTopLevel": true
       },
       {
         "name": "buddhabrot_tb.v",

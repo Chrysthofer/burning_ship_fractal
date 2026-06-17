@@ -2,13 +2,13 @@ module andExemplo (
 
 input  clk, rst,
 output signed [22:0] out,
-output [0:0] out_en);
+output [0:0] out_en,
+output cheguei);
 
 /* verilator tracing_off */
 
 wire [22:0] in;
 wire itr = 1'b0;
-wire cheguei;
 wire proc_req_in, proc_out_en;
 wire [0:0] addr_in;
 wire [0:0] addr_out;
@@ -42,6 +42,7 @@ processor#(.NUBITS(23),
 .NBIOIN(1),
 .NBIOOU(1),
 .FFTSIZ(8),
+.TOAQUIADDR(9),
 .LOD(1),
 .SET(1),
 .ADD(1),
