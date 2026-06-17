@@ -1,0 +1,85 @@
+#PRNAME complex_float_test
+#NUBITS 32
+#NBMANT 23
+#NBEXPO 8
+#NDSTAC 64
+#SDEPTH 32
+#NUIOIN 1
+#NUIOOU 8
+
+#NUGAIN 128
+
+// ============================================================
+//  complex_float_test.cmm
+//  Exercise floats and complex numbers, stream results to ports
+//  Port map (fout):
+//    0 : float operations result        (a*b + c)
+//    1 : sqrt(2.0)
+//    2 : sin(pi/4)                       ~ 0.7071
+//    3 : real( z1 * z2 )                 z1=(3+4i), z2=(1+2i) -> -5
+//    4 : imag( z1 * z2 )                                      -> 10
+//    5 : mod2( z1 )                      |3+4i|^2 = 25
+//    6 : real( conj(z1) + z2 )           4
+//    7 : fase( z2 )                      atan2(2,1) ~ 1.1071
+// ============================================================
+
+float a; float b; float c;
+float r_arith;
+float r_sqrt;
+float r_sin;
+
+comp  z1;
+comp  z2;
+comp  zmul;
+comp  zsum;
+
+float r_re;
+float r_im;
+float r_mod2;
+float r_sum_re;
+float r_phase;
+
+void main() {
+    // ---- pure float arithmetic ----
+    a = 1.25;
+    b = 2.50;
+    c = 0.75;
+    r_arith = a * b + c;          // 3.875
+    fout(0, r_arith);
+
+    // ---- transcendental floats ----
+    r_sqrt = sqrt(2.0);           // 1.41421356
+    fout(1, r_sqrt);
+
+    r_sin  = sin(0.785398163);    // sin(pi/4) ~ 0.70710678
+    fout(2, r_sin);
+
+    // ---- complex numbers ----
+    z1 = 3.0 + 4.0i;
+    z2 = 1.0 + 2.0i;
+
+    // multiplication: (3+4i)*(1+2i) = (3 - 8) + (6 + 4)i = -5 + 10i
+    zmul = z1 * z2;
+    r_re = real(zmul);
+    r_im = imag(zmul);
+    fout(3, r_re);
+    fout(4, r_im);
+
+    // squared magnitude of z1: 3^2 + 4^2 = 25
+    r_mod2 = mod2(z1);
+    fout(5, r_mod2);
+
+    // conj(z1) + z2 = (3 - 4i) + (1 + 2i) = 4 - 2i
+    zsum = conj(z1) + z2;
+    r_sum_re = real(zsum);
+    fout(6, r_sum_re);
+
+    // phase of z2 = atan2(2, 1) ~ 1.10714872
+    r_phase = fase(z2);
+    fout(7, r_phase);
+
+    // keep processor alive (hold last values on ports)
+    while (1) {
+        fout(7, r_phase);
+    }
+}

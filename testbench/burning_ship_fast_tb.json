@@ -1,0 +1,18 @@
+{
+  "tbPath": "C:\\Users\\LCOM\\Desktop\\burning_ship_fractal\\burning_ship_fractal\\burning_ship_fast_tb.v",
+  "tbModule": "burning_ship_fast_tb",
+  "hadOriginalDumpvars": false,
+  "gtkwFiles": [],
+  "waveSignals": [
+    "burning_ship_fast_tb.clk",
+    "burning_ship_fast_tb.done",
+    "burning_ship_fast_tb.pixel_count",
+    "burning_ship_fast_tb.pixel_x",
+    "burning_ship_fast_tb.pixel_y",
+    "burning_ship_fast_tb.proc_io_out",
+    "burning_ship_fast_tb.proc_out_en",
+    "burning_ship_fast_tb.rst"
+  ],
+  "wcInitialized": true,
+  "wcCustomized": true
+}

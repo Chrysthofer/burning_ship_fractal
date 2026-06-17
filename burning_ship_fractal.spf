@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "projectName": "burning_ship_fractal",
+    "createdAt": "2026-05-19T22:38:24.445Z",
+    "lastModified": "2026-06-16T14:32:56.921Z",
+    "computerName": "KRISTOFFER",
+    "appVersion": "6.3.0",
+    "projectPath": "C:\\Users\\LCOM\\Desktop\\burning_ship_fractal\\burning_ship_fractal",
+    "lastOpened": "2026-06-17T11:06:14.882Z"
+  },
+  "structure": {
+    "basePath": "C:\\Users\\LCOM\\Desktop\\burning_ship_fractal\\burning_ship_fractal",
+    "folders": [],
+    "processors": [
+      {
+        "name": "burning_ship",
+        "clk": 100,
+        "numClocks": 900000000,
+        "showArrays": false,
+        "exists": true
+      },
+      {
+        "name": "buddhabrot",
+        "clk": 100,
+        "numClocks": 900000000,
+        "exists": true
+      },
+      {
+        "name": "procTest_00",
+        "exists": true
+      },
+      {
+        "name": "complex_float_test",
+        "clk": 100,
+        "numClocks": 5000,
+        "exists": true
+      }
+    ],
+    "topLevelFile": "complex_float_test\\Hardware\\complex_float_test.v",
+    "testbenchFile": "complex_float_test\\Simulation\\complex_float_test_tb.v",
+    "synthesizableFiles": [
+      {
+        "name": "buddhabrot.v",
+        "path": "buddhabrot\\Hardware\\buddhabrot.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "AndGate.v",
+        "path": "C:\\Users\\LCOM\\Desktop\\proj_teste\\AndGate\\Hardware\\AndGate.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "burning_ship_fast_top.v",
+        "path": "burning_ship_fast_top.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "burning_ship.v",
+        "path": "burning_ship\\Hardware\\burning_ship.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "BurningShip.v",
+        "path": "C:\\Users\\LCOM\\Desktop\\proj_teste\\BurningShip\\Hardware\\BurningShip.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "Mandelbrot.v",
+        "path": "C:\\Users\\LCOM\\Desktop\\proj_teste\\Mandelbrot\\Hardware\\Mandelbrot.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "procTest_00_top.v",
+        "path": "C:\\Users\\LCOM\\Desktop\\proj_teste\\procTest_00_top.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "procTest_00_wrap.v",
+        "path": "C:\\Users\\LCOM\\Desktop\\proj_teste\\procTest_00_wrap.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "procTest_00.v",
+        "path": "procTest_00\\Hardware\\procTest_00.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "complex_float_test.v",
+        "path": "complex_float_test\\Hardware\\complex_float_test.v",
+        "isTopLevel": true
+      }
+    ],
+    "testbenchFiles": [
+      {
+        "name": "buddhabrot_tb.v",
+        "path": "buddhabrot\\Simulation\\buddhabrot_tb.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "AndGate_tb.v",
+        "path": "C:\\Users\\LCOM\\Desktop\\proj_teste\\AndGate\\Simulation\\AndGate_tb.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "burning_ship_fast_tb.v",
+        "path": "burning_ship_fast_tb.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "burning_ship_tb.v",
+        "path": "burning_ship\\Simulation\\burning_ship_tb.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "BurningShip_tb.v",
+        "path": "C:\\Users\\LCOM\\Desktop\\proj_teste\\BurningShip\\Simulation\\BurningShip_tb.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "Mandelbrot_tb.v",
+        "path": "C:\\Users\\LCOM\\Desktop\\proj_teste\\Mandelbrot\\Simulation\\Mandelbrot_tb.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "procTest_00_sim.v",
+        "path": "C:\\Users\\LCOM\\Desktop\\proj_teste\\procTest_00_sim.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "procTest_00_tb_new.v",
+        "path": "C:\\Users\\LCOM\\Desktop\\proj_teste\\procTest_00_tb_new.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "procTest_00_tb.v",
+        "path": "C:\\Users\\LCOM\\Desktop\\proj_teste\\procTest_00\\Simulation\\procTest_00_tb.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "procTest_00_tb.v",
+        "path": "procTest_00\\Simulation\\procTest_00_tb.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "complex_float_test_tb.v",
+        "path": "complex_float_test\\Simulation\\complex_float_test_tb.v",
+        "isTopLevel": true
+      }
+    ]
+  }
+}

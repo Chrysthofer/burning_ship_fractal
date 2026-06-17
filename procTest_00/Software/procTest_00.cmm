@@ -1,0 +1,18 @@
+#PRNAME procTest_00
+#NUBITS 23
+#NDSTAC 5
+#SDEPTH 5
+#NUIOIN 1
+#NUIOOU 1
+#NBMANT 16
+#NBEXPO 6
+#NUGAIN 128
+
+void main()
+{
+    int a = 6;
+    int b = 6;
+    int c = a + b;
+
+    out(0,c);
+}

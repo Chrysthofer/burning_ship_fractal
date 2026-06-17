@@ -1,0 +1,106 @@
+// ============================================================
+//  Buddhabrot — NIPSCERN / SAPHO
+//
+//  Algoritmo:
+//    1. Varre uma grade de pontos c em [-2, 2] x [-2, 2]
+//       (SX x SY amostras, determinístico — sem RNG).
+//    2. Para cada c, itera z = z^2 + c (Mandelbrot) ate MAXIT.
+//       Grava a trajetoria (zx, zy) em arrays.
+//    3. Se a orbita ESCAPA (|z|^2 > 4), reproduz a trajetoria
+//       e incrementa hist[py][px] em cada ponto visitado.
+//       Se nao escapa (esta dentro do Mandelbrot), descarta —
+//       essa e a diferenca chave do Buddhabrot vs Mandelbrot.
+//    4. Ao terminar, despeja hist em raster (1 int por linha)
+//       em output_0.txt — pronto para o visualizador.
+//
+//  Saida: 256 x 256 (= 65536 linhas). Configurar o visualizador
+//  no modo RASTER, canvas 256x256.
+// ============================================================
+
+#PRNAME buddhabrot
+#NUBITS 32
+#NBMANT 23
+#NBEXPO 8
+#NDSTAC 64
+#SDEPTH 16
+#NUIOIN 1
+#NUIOOU 1
+#NUGAIN 128
+
+// Histograma 256x256 achatado em 1D (65536 celulas)
+int hist[65536];
+
+// Buffer da trajetoria do ponto c atual (max 500 iteracoes)
+float trajx[500];
+float trajy[500];
+
+void main() {
+    // ---- limpa histograma ----
+    int ii = 0;
+    while (ii < 65536) {
+        hist[ii] = 0;
+        ii = ii + 1;
+    }
+
+    // ---- varredura da grade de amostras ----
+    // Grade 512 x 512 = 262.144 pontos c.
+    // Passo = 4.0 / 512 = 0.0078125
+    int sy = 0;
+    while (sy < 512) {
+        float cy = -2.0 + sy * 0.0078125;
+        int sx = 0;
+        while (sx < 512) {
+            float cx = -2.0 + sx * 0.0078125;
+
+            // ---- itera Mandelbrot, gravando trajetoria ----
+            float zx = 0.0;
+            float zy = 0.0;
+            int n = 0;
+            int escaped = 0;
+            while (n < 500) {
+                trajx[n] = zx;
+                trajy[n] = zy;
+                float zx2 = zx*zx - zy*zy + cx;
+                float zy2 = 2.0*zx*zy + cy;
+                zx = zx2;
+                zy = zy2;
+                if (zx*zx + zy*zy > 4.0) {
+                    escaped = 1;
+                    break;
+                }
+                n = n + 1;
+            }
+
+            // ---- se escapou, acumula trajetoria no histograma ----
+            // hist e 256x256 sobre o dominio [-2,2] x [-2,2]
+            // escala = 256 / 4 = 64
+            if (escaped == 1) {
+                int k = 0;
+                while (k < n) {
+                    int px = (trajx[k] + 2.0) * 64.0;
+                    int py = (trajy[k] + 2.0) * 64.0;
+                    if (px >= 0) {
+                        if (px < 256) {
+                            if (py >= 0) {
+                                if (py < 256) {
+                                    int idx = py * 256 + px;
+                                    hist[idx] = hist[idx] + 1;
+                                }
+                            }
+                        }
+                    }
+                    k = k + 1;
+                }
+            }
+            sx = sx + 1;
+        }
+        sy = sy + 1;
+    }
+
+    // ---- dump do histograma em raster (top->bottom, left->right) ----
+    int p = 0;
+    while (p < 65536) {
+        out(0, hist[p]);
+        p = p + 1;
+    }
+}

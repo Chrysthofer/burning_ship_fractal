@@ -1,0 +1,15 @@
+{
+  "tbPath": "C:\\Users\\chrys\\Desktop\\burning_ship_fractal\\burning_ship\\Simulation\\burning_ship_tb.v",
+  "tbModule": "burning_ship_tb",
+  "hadOriginalDumpvars": false,
+  "gtkwFiles": [],
+  "waveSignals": [
+    "burning_ship_tb.clk",
+    "burning_ship_tb.data_out_0",
+    "burning_ship_tb.out_en_0",
+    "burning_ship_tb.progress",
+    "burning_ship_tb.rst"
+  ],
+  "wcInitialized": true,
+  "wcCustomized": true
+}
