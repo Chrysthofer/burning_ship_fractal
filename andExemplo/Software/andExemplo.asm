@@ -1,5 +1,5 @@
 NOP
-#PRNAME procTest_00
+#PRNAME andExemplo
 #NUBITS 23
 #NDSTAC 5
 #SDEPTH 5
@@ -8,13 +8,12 @@ NOP
 #NBMANT 16
 #NBEXPO 6
 #NUGAIN 128
-@main LOD 6
+@main LOD 5
 SET main_a
-LOD 6
+LOD 5
 SET main_b
 LOD main_a
 ADD main_b
 SET main_c
 OUT 0
-#TOAQUI
 @fim JMP fim

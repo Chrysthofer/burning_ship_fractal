@@ -66,8 +66,8 @@ processor#(.NUBITS(32),
 .I2F(1),
 .AND(1),
 .F_NEG(1),
-.DFILE("C:/Users/LCOM/Desktop/burning_ship_fractal/burning_ship_fractal/complex_float_test/Hardware/complex_float_test_data.mif"),
-.IFILE("C:/Users/LCOM/Desktop/burning_ship_fractal/burning_ship_fractal/complex_float_test/Hardware/complex_float_test_inst.mif"))
+.DFILE("C:/Users/LCOM/Desktop/burning_ship_fractal/fractal_proc/complex_float_test/Hardware/complex_float_test_data.mif"),
+.IFILE("C:/Users/LCOM/Desktop/burning_ship_fractal/fractal_proc/complex_float_test/Hardware/complex_float_test_inst.mif"))
 
 `ifdef YANC_SIM_VIS
 p_complex_float_test (clk, rst, in, out, addr_in, addr_out, proc_req_in, proc_out_en, itr, cheguei, mem_wr, mem_addr_wr,pc_sim_val);

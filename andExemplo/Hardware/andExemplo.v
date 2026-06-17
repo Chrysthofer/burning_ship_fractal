@@ -1,14 +1,14 @@
-module procTest_00 (
+module andExemplo (
 
 input  clk, rst,
 output signed [22:0] out,
-output [0:0] out_en,
-output cheguei);
+output [0:0] out_en);
 
 /* verilator tracing_off */
 
 wire [22:0] in;
 wire itr = 1'b0;
+wire cheguei;
 wire proc_req_in, proc_out_en;
 wire [0:0] addr_in;
 wire [0:0] addr_out;
@@ -42,18 +42,17 @@ processor#(.NUBITS(23),
 .NBIOIN(1),
 .NBIOOU(1),
 .FFTSIZ(8),
-.TOAQUIADDR(9),
 .LOD(1),
 .SET(1),
 .ADD(1),
 .OUT(1),
-.DFILE("C:/Users/LCOM/Desktop/burning_ship_fractal/fractal_proc/procTest_00/Hardware/procTest_00_data.mif"),
-.IFILE("C:/Users/LCOM/Desktop/burning_ship_fractal/fractal_proc/procTest_00/Hardware/procTest_00_inst.mif"))
+.DFILE("C:/Users/LCOM/Desktop/burning_ship_fractal/fractal_proc/andExemplo/Hardware/andExemplo_data.mif"),
+.IFILE("C:/Users/LCOM/Desktop/burning_ship_fractal/fractal_proc/andExemplo/Hardware/andExemplo_inst.mif"))
 
 `ifdef YANC_SIM_VIS
-p_procTest_00 (clk, rst, in, out, addr_in, addr_out, proc_req_in, proc_out_en, itr, cheguei, mem_wr, mem_addr_wr,pc_sim_val);
+p_andExemplo (clk, rst, in, out, addr_in, addr_out, proc_req_in, proc_out_en, itr, cheguei, mem_wr, mem_addr_wr,pc_sim_val);
 `else
-p_procTest_00 (clk, rst, in, out, addr_in, addr_out, proc_req_in, proc_out_en, itr, cheguei);
+p_andExemplo (clk, rst, in, out, addr_in, addr_out, proc_req_in, proc_out_en, itr, cheguei);
 `endif
 
 assign out_en = proc_out_en;
@@ -110,7 +109,7 @@ reg [19:0] min [0:10-1];
 /* verilator tracing_off */ reg signed [19:0] linetab /* verilator public_flat */ =-1; /* verilator tracing_on */
 reg signed [19:0] linetabs=-1;
 
-initial	$readmemb("pc_procTest_00_mem.txt",min);
+initial	$readmemb("pc_andExemplo_mem.txt",min);
 
 always @ (posedge clk) begin
 if (pc_sim_val < 10) linetab <= min[pc_sim_val];

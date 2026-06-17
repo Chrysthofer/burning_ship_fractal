@@ -1,0 +1,23 @@
+{
+  "tbPath": "C:\\Users\\LCOM\\Desktop\\burning_ship_fractal\\fractal_proc\\andExemplo\\Simulation\\andExemplo_tb.v",
+  "tbModule": "andExemplo_tb",
+  "hadOriginalDumpvars": true,
+  "gtkwFiles": [],
+  "surferFiles": [],
+  "waveSignals": [
+    "andExemplo_tb.proc.linetabs",
+    "andExemplo_tb.proc.me1_f_main_v_a_e_",
+    "andExemplo_tb.proc.me1_f_main_v_b_e_",
+    "andExemplo_tb.proc.me1_f_main_v_c_e_",
+    "andExemplo_tb.proc.out_en_sim_0",
+    "andExemplo_tb.proc.out_sig_0",
+    "andExemplo_tb.proc.p_andExemplo.core.sp.fl_full",
+    "andExemplo_tb.proc.p_andExemplo.core.sp.fl_max",
+    "andExemplo_tb.proc.p_andExemplo.core.sp.pointeri",
+    "andExemplo_tb.proc.p_andExemplo.core.ula.delta_float",
+    "andExemplo_tb.proc.p_andExemplo.core.ula.delta_int",
+    "andExemplo_tb.proc.valr2"
+  ],
+  "wcInitialized": true,
+  "wcCustomized": true
+}

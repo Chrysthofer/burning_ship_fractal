@@ -71,14 +71,14 @@ reg out_en_7 = 0;
 
 // open a file for writing on each port
 initial begin
-    data_out_0 = $fopen("C:/Users/LCOM/Desktop/burning_ship_fractal/burning_ship_fractal/complex_float_test/Simulation/output_0.txt", "w"); // check the output data in this file
-    data_out_1 = $fopen("C:/Users/LCOM/Desktop/burning_ship_fractal/burning_ship_fractal/complex_float_test/Simulation/output_1.txt", "w"); // check the output data in this file
-    data_out_2 = $fopen("C:/Users/LCOM/Desktop/burning_ship_fractal/burning_ship_fractal/complex_float_test/Simulation/output_2.txt", "w"); // check the output data in this file
-    data_out_3 = $fopen("C:/Users/LCOM/Desktop/burning_ship_fractal/burning_ship_fractal/complex_float_test/Simulation/output_3.txt", "w"); // check the output data in this file
-    data_out_4 = $fopen("C:/Users/LCOM/Desktop/burning_ship_fractal/burning_ship_fractal/complex_float_test/Simulation/output_4.txt", "w"); // check the output data in this file
-    data_out_5 = $fopen("C:/Users/LCOM/Desktop/burning_ship_fractal/burning_ship_fractal/complex_float_test/Simulation/output_5.txt", "w"); // check the output data in this file
-    data_out_6 = $fopen("C:/Users/LCOM/Desktop/burning_ship_fractal/burning_ship_fractal/complex_float_test/Simulation/output_6.txt", "w"); // check the output data in this file
-    data_out_7 = $fopen("C:/Users/LCOM/Desktop/burning_ship_fractal/burning_ship_fractal/complex_float_test/Simulation/output_7.txt", "w"); // check the output data in this file
+    data_out_0 = $fopen("C:/Users/LCOM/Desktop/burning_ship_fractal/fractal_proc/complex_float_test/Simulation/output_0.txt", "w"); // check the output data in this file
+    data_out_1 = $fopen("C:/Users/LCOM/Desktop/burning_ship_fractal/fractal_proc/complex_float_test/Simulation/output_1.txt", "w"); // check the output data in this file
+    data_out_2 = $fopen("C:/Users/LCOM/Desktop/burning_ship_fractal/fractal_proc/complex_float_test/Simulation/output_2.txt", "w"); // check the output data in this file
+    data_out_3 = $fopen("C:/Users/LCOM/Desktop/burning_ship_fractal/fractal_proc/complex_float_test/Simulation/output_3.txt", "w"); // check the output data in this file
+    data_out_4 = $fopen("C:/Users/LCOM/Desktop/burning_ship_fractal/fractal_proc/complex_float_test/Simulation/output_4.txt", "w"); // check the output data in this file
+    data_out_5 = $fopen("C:/Users/LCOM/Desktop/burning_ship_fractal/fractal_proc/complex_float_test/Simulation/output_5.txt", "w"); // check the output data in this file
+    data_out_6 = $fopen("C:/Users/LCOM/Desktop/burning_ship_fractal/fractal_proc/complex_float_test/Simulation/output_6.txt", "w"); // check the output data in this file
+    data_out_7 = $fopen("C:/Users/LCOM/Desktop/burning_ship_fractal/fractal_proc/complex_float_test/Simulation/output_7.txt", "w"); // check the output data in this file
 end
 
 // decode output ports

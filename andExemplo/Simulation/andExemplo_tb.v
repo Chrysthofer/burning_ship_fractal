@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module procTest_00_tb();
+module andExemplo_tb();
 
 // clock and reset generation -------------------------------------------------
 
@@ -22,10 +22,8 @@ always #5.000000 clk = ~clk;
 wire signed [22:0] proc_io_out;
 wire [0:0] proc_out_en;
 
-wire proc_cheguei;
-
 /* verilator tracing_on */
-procTest_00 proc(clk,rst,proc_io_out,proc_out_en,proc_cheguei);
+andExemplo proc(clk,rst,proc_io_out,proc_out_en);
 
 /* verilator tracing_off */
 
@@ -38,7 +36,7 @@ reg out_en_0 = 0;
 
 // open a file for writing on each port
 initial begin
-    data_out_0 = $fopen("C:/Users/LCOM/Desktop/burning_ship_fractal/fractal_proc/procTest_00/Simulation/output_0.txt", "w"); // check the output data in this file
+    data_out_0 = $fopen("C:/Users/LCOM/Desktop/burning_ship_fractal/fractal_proc/andExemplo/Simulation/output_0.txt", "w"); // check the output data in this file
 end
 
 // decode output ports
@@ -65,22 +63,22 @@ end
 
 initial begin
 
-    $dumpfile("procTest_00_tb.vcd");
+    $dumpfile("andExemplo_tb.vcd");
 
-    $dumpvars(0,procTest_00_tb.clk);
-    $dumpvars(0,procTest_00_tb.rst);
-    $dumpvars(0,procTest_00_tb.proc.out_en_sim_0);
-    $dumpvars(0,procTest_00_tb.proc.out_sig_0);
-    $dumpvars(0,procTest_00_tb.proc.valr2);
-    $dumpvars(0,procTest_00_tb.proc.linetabs);
-    $dumpvars(0,procTest_00_tb.proc.me1_f_main_v_a_e_);
-    $dumpvars(0,procTest_00_tb.proc.me1_f_main_v_b_e_);
-    $dumpvars(0,procTest_00_tb.proc.me1_f_main_v_c_e_);
-    $dumpvars(0,procTest_00_tb.proc.p_procTest_00.core.sp.pointeri);
-    $dumpvars(0,procTest_00_tb.proc.p_procTest_00.core.sp.fl_max);
-    $dumpvars(0,procTest_00_tb.proc.p_procTest_00.core.sp.fl_full);
-    $dumpvars(0,procTest_00_tb.proc.p_procTest_00.core.ula.delta_float);
-    $dumpvars(0,procTest_00_tb.proc.p_procTest_00.core.ula.delta_int);
+    $dumpvars(0,andExemplo_tb.clk);
+    $dumpvars(0,andExemplo_tb.rst);
+    $dumpvars(0,andExemplo_tb.proc.out_en_sim_0);
+    $dumpvars(0,andExemplo_tb.proc.out_sig_0);
+    $dumpvars(0,andExemplo_tb.proc.valr2);
+    $dumpvars(0,andExemplo_tb.proc.linetabs);
+    $dumpvars(0,andExemplo_tb.proc.me1_f_main_v_a_e_);
+    $dumpvars(0,andExemplo_tb.proc.me1_f_main_v_b_e_);
+    $dumpvars(0,andExemplo_tb.proc.me1_f_main_v_c_e_);
+    $dumpvars(0,andExemplo_tb.proc.p_andExemplo.core.sp.pointeri);
+    $dumpvars(0,andExemplo_tb.proc.p_andExemplo.core.sp.fl_max);
+    $dumpvars(0,andExemplo_tb.proc.p_andExemplo.core.sp.fl_full);
+    $dumpvars(0,andExemplo_tb.proc.p_andExemplo.core.ula.delta_float);
+    $dumpvars(0,andExemplo_tb.proc.p_andExemplo.core.ula.delta_int);
 
     if ($test$plusargs("HEADER_ONLY")) begin #1; $dumpflush; $finish; end
 

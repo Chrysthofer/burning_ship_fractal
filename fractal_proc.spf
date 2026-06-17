@@ -1,15 +1,15 @@
 {
   "metadata": {
-    "projectName": "burning_ship_fractal",
+    "projectName": "fractal_proc",
     "createdAt": "2026-05-19T22:38:24.445Z",
-    "lastModified": "2026-06-16T14:32:56.921Z",
+    "lastModified": "2026-06-17T13:47:20.219Z",
     "computerName": "KRISTOFFER",
     "appVersion": "6.3.0",
-    "projectPath": "C:\\Users\\LCOM\\Desktop\\burning_ship_fractal\\burning_ship_fractal",
-    "lastOpened": "2026-06-17T11:06:14.882Z"
+    "projectPath": "C:\\Users\\LCOM\\Desktop\\burning_ship_fractal\\fractal_proc",
+    "lastOpened": "2026-06-17T14:15:36.969Z"
   },
   "structure": {
-    "basePath": "C:\\Users\\LCOM\\Desktop\\burning_ship_fractal\\burning_ship_fractal",
+    "basePath": "C:\\Users\\LCOM\\Desktop\\burning_ship_fractal\\fractal_proc",
     "folders": [],
     "processors": [
       {
@@ -34,19 +34,28 @@
         "clk": 100,
         "numClocks": 5000,
         "exists": true
+      },
+      {
+        "name": "andExemplo",
+        "exists": true
       }
     ],
-    "topLevelFile": "complex_float_test\\Hardware\\complex_float_test.v",
-    "testbenchFile": "complex_float_test\\Simulation\\complex_float_test_tb.v",
+    "topLevelFile": "andExemplo\\Hardware\\andExemplo.v",
+    "testbenchFile": "andExemplo\\Simulation\\andExemplo_tb.v",
     "synthesizableFiles": [
-      {
-        "name": "buddhabrot.v",
-        "path": "buddhabrot\\Hardware\\buddhabrot.v",
-        "isTopLevel": false
-      },
       {
         "name": "AndGate.v",
         "path": "C:\\Users\\LCOM\\Desktop\\proj_teste\\AndGate\\Hardware\\AndGate.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "andExemplo.v",
+        "path": "andExemplo\\Hardware\\andExemplo.v",
+        "isTopLevel": true
+      },
+      {
+        "name": "buddhabrot.v",
+        "path": "buddhabrot\\Hardware\\buddhabrot.v",
         "isTopLevel": false
       },
       {
@@ -83,22 +92,22 @@
         "name": "procTest_00.v",
         "path": "procTest_00\\Hardware\\procTest_00.v",
         "isTopLevel": false
-      },
-      {
-        "name": "complex_float_test.v",
-        "path": "complex_float_test\\Hardware\\complex_float_test.v",
-        "isTopLevel": true
       }
     ],
     "testbenchFiles": [
       {
-        "name": "buddhabrot_tb.v",
-        "path": "buddhabrot\\Simulation\\buddhabrot_tb.v",
+        "name": "AndGate_tb.v",
+        "path": "C:\\Users\\LCOM\\Desktop\\proj_teste\\AndGate\\Simulation\\AndGate_tb.v",
         "isTopLevel": false
       },
       {
-        "name": "AndGate_tb.v",
-        "path": "C:\\Users\\LCOM\\Desktop\\proj_teste\\AndGate\\Simulation\\AndGate_tb.v",
+        "name": "andExemplo_tb.v",
+        "path": "andExemplo\\Simulation\\andExemplo_tb.v",
+        "isTopLevel": true
+      },
+      {
+        "name": "buddhabrot_tb.v",
+        "path": "buddhabrot\\Simulation\\buddhabrot_tb.v",
         "isTopLevel": false
       },
       {
@@ -114,6 +123,16 @@
       {
         "name": "BurningShip_tb.v",
         "path": "C:\\Users\\LCOM\\Desktop\\proj_teste\\BurningShip\\Simulation\\BurningShip_tb.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "complex_float_test_tb.v",
+        "path": "complex_float_test\\Simulation\\complex_float_test_tb.v",
+        "isTopLevel": false
+      },
+      {
+        "name": "complex_float_test.v",
+        "path": "complex_float_test\\Hardware\\complex_float_test.v",
         "isTopLevel": false
       },
       {
@@ -140,11 +159,6 @@
         "name": "procTest_00_tb.v",
         "path": "procTest_00\\Simulation\\procTest_00_tb.v",
         "isTopLevel": false
-      },
-      {
-        "name": "complex_float_test_tb.v",
-        "path": "complex_float_test\\Simulation\\complex_float_test_tb.v",
-        "isTopLevel": true
       }
     ]
   }

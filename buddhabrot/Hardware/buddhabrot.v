@@ -62,8 +62,8 @@ processor#(.NUBITS(32),
 .LIN(1),
 .MLT(1),
 .OUT(1),
-.DFILE("C:/Users/LCOM/Desktop/burning_ship_fractal/burning_ship_fractal/buddhabrot/Hardware/buddhabrot_data.mif"),
-.IFILE("C:/Users/LCOM/Desktop/burning_ship_fractal/burning_ship_fractal/buddhabrot/Hardware/buddhabrot_inst.mif"))
+.DFILE("C:/Users/LCOM/Desktop/burning_ship_fractal/fractal_proc/buddhabrot/Hardware/buddhabrot_data.mif"),
+.IFILE("C:/Users/LCOM/Desktop/burning_ship_fractal/fractal_proc/buddhabrot/Hardware/buddhabrot_inst.mif"))
 
 `ifdef YANC_SIM_VIS
 p_buddhabrot (clk, rst, in, out, addr_in, addr_out, proc_req_in, proc_out_en, itr, cheguei, mem_wr, mem_addr_wr,pc_sim_val);

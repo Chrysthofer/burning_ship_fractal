@@ -36,7 +36,7 @@ reg out_en_0 = 0;
 
 // open a file for writing on each port
 initial begin
-    data_out_0 = $fopen("C:/Users/LCOM/Desktop/burning_ship_fractal/burning_ship_fractal/burning_ship/Simulation/output_0.txt", "w"); // check the output data in this file
+    data_out_0 = $fopen("C:/Users/LCOM/Desktop/burning_ship_fractal/fractal_proc/burning_ship/Simulation/output_0.txt", "w"); // check the output data in this file
 end
 
 // decode output ports
